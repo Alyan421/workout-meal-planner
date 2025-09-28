@@ -1,10 +1,9 @@
 import requests
-import os
 from dotenv import load_dotenv
 
 # Load API keys
 load_dotenv()
-SPOON_KEY = os.getenv("SPOONACULAR_API_KEY")
+SPOON_KEY = st.secrets["api_keys"]["SPOONACULAR_API_KEY"]
 
 
 def get_meal_plan(calories=2000, timeframe="day"):
