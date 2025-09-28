@@ -1,10 +1,9 @@
 import requests
-import os
 from dotenv import load_dotenv
 
 # Load API keys
 load_dotenv()
-EXERCISE_KEY = os.getenv("EXERCISE_API_KEY")
+EXERCISE_KEY = st.secrets["api_keys"]["EXERCISE_API_KEY"]
 
 
 def get_exercises(muscle="biceps"):
